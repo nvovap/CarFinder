@@ -50,6 +50,47 @@ class FirstViewController: UITableViewController, CLLocationManagerDelegate {
     }
 
     @IBAction func addLocation(_ sender: AnyObject) {
+        var location : CLLocation
+        
+        if (CLLocationManager.authorizationStatus() != .authorizedWhenInUse) {
+            location = CLLocation(latitude: 32.830579, longitude: -117.153839)
+        } else {
+            location = locationManager.location!
+        }
+        
+        DataManager.sharedInstance.locations.insert(location, at: 0)
+        
+        tableView.reloadData()
+        
+    }
+    
+    
+    //MARK: - Table delegate
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+   
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DataManager.sharedInstance.locations.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
+        
+        cell.tag = indexPath.row
+        
+        let entry :CLLocation = DataManager.sharedInstance.locations[indexPath.row]
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "hh:mm:ss, MM-dd-yyyy"
+        
+        cell.textLabel?.text = "\(entry.coordinate.latitude), \(entry.coordinate.longitude)"
+        cell.detailTextLabel?.text = dateFormatter.string(from: entry.timestamp)
+        
+        return cell
         
     }
    

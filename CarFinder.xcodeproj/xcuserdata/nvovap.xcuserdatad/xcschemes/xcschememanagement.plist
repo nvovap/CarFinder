@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CaFinderSiri.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>CaFinderSiriUI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>CarFinder.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +22,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0306CEDB1D1287C9005BCDFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0306CEE41D1287CA005BCDFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0364C5D91D11468200192890</key>
 		<dict>
 			<key>primary</key>
