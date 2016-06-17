@@ -28,6 +28,8 @@ class IntentHandler: INExtension, INStartWorkoutIntentHandling, INPauseWorkoutIn
         }
         
         return self
+        
+        
     }
     
     // MARK: - INStartWorkoutIntentHandling

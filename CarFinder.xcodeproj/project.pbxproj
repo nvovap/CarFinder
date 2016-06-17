@@ -14,6 +14,7 @@
 		0306CEF11D1287CA005BCDFE /* CaFinderSiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0306CEE51D1287CA005BCDFE /* CaFinderSiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0306CEF41D1287CA005BCDFE /* CaFinderSiri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0306CEDC1D1287C9005BCDFE /* CaFinderSiri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0306CEFD1D12973E005BCDFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306CEFC1D12973E005BCDFE /* DataManager.swift */; };
+		0306CF3D1D143E0D005BCDFE /* UCAddLocationIntendHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306CF3C1D143E0D005BCDFE /* UCAddLocationIntendHandler.swift */; };
 		0364C5DE1D11468400192890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364C5DD1D11468400192890 /* AppDelegate.swift */; };
 		0364C5E01D11468400192890 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364C5DF1D11468400192890 /* FirstViewController.swift */; };
 		0364C5E21D11468400192890 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364C5E11D11468400192890 /* SecondViewController.swift */; };
@@ -66,6 +67,7 @@
 		0306CEEC1D1287CA005BCDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		0306CEEE1D1287CA005BCDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0306CEFC1D12973E005BCDFE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0306CF3C1D143E0D005BCDFE /* UCAddLocationIntendHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCAddLocationIntendHandler.swift; sourceTree = "<group>"; };
 		0364C5DA1D11468300192890 /* CarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0364C5DD1D11468400192890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0364C5DF1D11468400192890 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		0306CEDD1D1287CA005BCDFE /* CaFinderSiri */ = {
 			isa = PBXGroup;
 			children = (
+				0306CF3C1D143E0D005BCDFE /* UCAddLocationIntendHandler.swift */,
 				0306CEDE1D1287CA005BCDFE /* IntentHandler.swift */,
 				0306CEE01D1287CA005BCDFE /* Info.plist */,
 			);
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0306CF3D1D143E0D005BCDFE /* UCAddLocationIntendHandler.swift in Sources */,
 				0306CEDF1D1287CA005BCDFE /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +554,7 @@
 				0306CEF71D1287CA005BCDFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0306CEF81D1287CA005BCDFE /* Build configuration list for PBXNativeTarget "CaFinderSiri" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +563,7 @@
 				0306CEFA1D1287CA005BCDFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0364C5D51D11468200192890 /* Build configuration list for PBXProject "CarFinder" */ = {
 			isa = XCConfigurationList;
