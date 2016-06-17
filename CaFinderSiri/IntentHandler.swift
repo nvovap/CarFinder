@@ -22,13 +22,17 @@ import Intents
 class IntentHandler: INExtension, INStartWorkoutIntentHandling, INPauseWorkoutIntentHandling, INResumeWorkoutIntentHandling, INCancelWorkoutIntentHandling, INEndWorkoutIntentHandling {
     
     override func handler(for intent: INIntent) -> AnyObject {
-        // This is the default implementation.  If you want different objects to handle different intents,
-        // you can override this and return the handler you want for that particular intent.
+       
+        if intent is INSendMessageIntent {
+            return UCAddLocationIntendHandler()
+        }
         
         return self
     }
     
     // MARK: - INStartWorkoutIntentHandling
+    
+    
     
     // Implement resolution methods to provide additional information about your intent (optional).
     func resolveIsOpenEnded(forStartWorkout intent: INStartWorkoutIntent, with completion: (INBooleanResolutionResult) -> Void) {
