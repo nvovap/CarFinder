@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        INVocabulary.shared().setVocabularyStrings(OrderedSet(array: ["Add my location", "Set my location"]), of: INVocabularyStringType.workoutActivityName)
+        INVocabulary.shared().setVocabularyStrings(OrderedSet(array: ["Add my location", "Set my location", "nvova"]), of: INVocabularyStringType.workoutActivityName)
         
         
         return true
