@@ -5,14 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055.6"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--MainController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CarFinderWatch" customModuleProvider="target">
+                <controller identifier="MainController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CarFinderWatch" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="Vyz-wo-age">
                             <items>
-                                <tableRow id="qey-tX-WkJ" customClass="LocationRowController" customModule="CarFinderWatch_Extension">
+                                <tableRow identifier="cell" id="qey-tX-WkJ" customClass="LocationRowController" customModule="CarFinderWatch_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="8Bp-wE-Mzu">
                                         <items>
                                             <label alignment="left" text="Label" id="iXC-CQ-yRf"/>
