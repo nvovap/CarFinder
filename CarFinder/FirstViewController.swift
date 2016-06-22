@@ -8,11 +8,29 @@
 
 import UIKit
 import CoreLocation
+import WatchConnectivity
 
-class FirstViewController: UITableViewController, CLLocationManagerDelegate {
+class FirstViewController: UITableViewController, CLLocationManagerDelegate, WCSessionDelegate {
+    
+    
     
     var locationManager = CLLocationManager()
     var currentLocation = CLLocation()
+    
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: NSError?) {
+        
+    }
+    
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -34,6 +52,13 @@ class FirstViewController: UITableViewController, CLLocationManagerDelegate {
             fallthrough
         default:
             locationManager.requestWhenInUseAuthorization()
+        }
+        
+        
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
         }
         
     }
@@ -61,6 +86,15 @@ class FirstViewController: UITableViewController, CLLocationManagerDelegate {
         DataManager.sharedInstance.locations.insert(location, at: 0)
         
         tableView.reloadData()
+        
+        if (WCSession.isSupported()) {
+            do {
+                let userDict = ["Locations": DataManager.sharedInstance.locations]
+                try WCSession.default().updateApplicationContext(userDict)
+            } catch {
+                print("Error transferring data")
+            }
+        }
         
     }
     

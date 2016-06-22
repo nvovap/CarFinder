@@ -19,6 +19,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>CarFinderWatch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>CarFinderWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -33,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>0364C5D91D11468200192890</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03C589E11D1ACD60001F3E00</key>
 		<dict>
 			<key>primary</key>
 			<true/>
